@@ -3,6 +3,7 @@
 	<head>
 		<title>Contacts</title>
 		<base href='/'>
+		<link rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.min.css' />
 		<link rel='stylesheet' href='src/bootstrap.min.css' />
 	</head>
 	<body>
@@ -10,6 +11,18 @@
 			<div class='page-header'>
 				<h1>Contacts</h1>
 			</div>
+			<div class="container-fluid">
+		      <div class="nav-header">
+		        <ul class="nav navbar-nav">
+		          <li class="ng-scope active">
+		            <a class="text-center ng-binding" href="/contacts">Contacts</a>
+		          </li>
+		          <li>
+		            <a class="text-center ng-binding" href="/contacts/new">Add Contact</a>
+		          </li><!-- end ngRepeat: navLink in nav.navItems -->
+		        </ul>
+		    	</div>
+		    </div>
 			<div class='row'>
 				<div class='col-sm-12' ng-view>
 				</div>
@@ -20,6 +33,8 @@
 		<script src='lib/angular/angular.min.js'></script>
 		<script src='lib/angular-route/angular-route.min.js'></script>
 		<script src='src/app.js'></script>
+		<script src='src/filter.js'></script>
 		<script src='src/controller.js'></script>
+		<script src='src/factory.js'></script>
 	</body>
 </html>

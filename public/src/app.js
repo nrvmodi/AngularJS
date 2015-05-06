@@ -5,6 +5,16 @@ angular.module('ContactsApp',['ngRoute'])
 				templateUrl:'views/list.html'
 			});
 			
+			$routeProvider.when('/contacts/new',{
+				controller:'NewContactController',
+				templateUrl:'views/newContact.html'
+			});
+			
+			$routeProvider.when('/contacts/:id',{
+				controller:'ViewController',
+				templateUrl:'views/viewContact.html'
+			});
+			
 			$locationProvider.html5Mode(true);
 	});
 	/*.run(function($rootScope){

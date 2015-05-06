@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="lib/angular"/>
+	<classpathentry kind="src" path="lib/angular-route"/>
+	<classpathentry excluding="grunt/|dist/js/|js/" kind="src" path="lib/bootstrap"/>
+	<classpathentry kind="src" path="lib/bootstrap/dist/js"/>
+	<classpathentry kind="src" path="lib/bootstrap/grunt"/>
+	<classpathentry kind="src" path="lib/bootstrap/js"/>
+	<classpathentry kind="src" path="lib/jquery/dist"/>
+	<classpathentry excluding="data/var/|exports/|ajax/|event/|traversing/var/|queue/|core/var/|var/|css/var/|sizzle/dist/|manipulation/var/|ajax/var/|data/|core/|effects/|manipulation/|css/|attributes/|traversing/" kind="src" path="lib/jquery/src"/>
+	<classpathentry excluding="var/" kind="src" path="lib/jquery/src/ajax"/>
+	<classpathentry kind="src" path="lib/jquery/src/ajax/var"/>
+	<classpathentry kind="src" path="lib/jquery/src/attributes"/>
+	<classpathentry excluding="var/" kind="src" path="lib/jquery/src/core"/>
+	<classpathentry kind="src" path="lib/jquery/src/core/var"/>
+	<classpathentry excluding="var/" kind="src" path="lib/jquery/src/css"/>
+	<classpathentry kind="src" path="lib/jquery/src/css/var"/>
+	<classpathentry excluding="var/" kind="src" path="lib/jquery/src/data"/>
+	<classpathentry kind="src" path="lib/jquery/src/data/var"/>
+	<classpathentry kind="src" path="lib/jquery/src/effects"/>
+	<classpathentry kind="src" path="lib/jquery/src/event"/>
+	<classpathentry kind="src" path="lib/jquery/src/exports"/>
+	<classpathentry excluding="var/" kind="src" path="lib/jquery/src/manipulation"/>
+	<classpathentry kind="src" path="lib/jquery/src/manipulation/var"/>
+	<classpathentry kind="src" path="lib/jquery/src/queue"/>
+	<classpathentry kind="src" path="lib/jquery/src/sizzle/dist"/>
+	<classpathentry excluding="var/" kind="src" path="lib/jquery/src/traversing"/>
+	<classpathentry kind="src" path="lib/jquery/src/traversing/var"/>
+	<classpathentry kind="src" path="lib/jquery/src/var"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

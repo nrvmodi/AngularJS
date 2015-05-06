@@ -1,0 +1,17 @@
+
+<div class="list-group-item">
+	<p><h3 class="text-left">First Name :</h3>{{contact.firstName}}</p>
+	<p><h3 class="text-left">Last Name :</h3>{{contact.lastName}}</p>
+	<a href="#">
+		<button class="btn btn-default">
+			<span class="glyphicon glyphicon-pencil"></span><span> - Edit</span>
+		</button>
+	</a> 
+	<a href="#/">
+		<button class="btn btn-default"
+			ng-click="remove(contact.id)">
+			<span class="glyphicon glyphicon-remove"></span><span> -
+				Remove</span>
+		</button>
+	</a>
+</div>
