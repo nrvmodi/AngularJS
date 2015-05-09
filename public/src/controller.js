@@ -1,10 +1,9 @@
 angular.module('ContactsApp')
-	.controller('ListController',function($scope,ContactService,$location){
+	.controller('ListController',function($scope,ContactService,$location,$rootScope){
 		$scope.contacts = ContactService.getContacts();
-		
 		$scope.fields=[
-           {name:'firstName',type:'string'},
-           {name:'lastName',type:'string'}
+           {name:'firstName',type:'text'},
+           {name:'lastName',type:'text'}
 		];
 		
 		$scope.sort=function(field){
@@ -20,9 +19,10 @@ angular.module('ContactsApp')
 		};
 	})
 	.controller('NewContactController',function($scope,$rootScope,$location,ContactService){
+
 		$scope.contact= {
 			id:'',
-			firstName:'',
+			firstName:'dd',
 			lastName:''
 		};
 		$scope.contacts = ContactService.getContacts();
