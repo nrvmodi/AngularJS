@@ -1,10 +1,7 @@
 angular.module('ContactsApp')
-		.value('FieldTypes',function(){
-			var FieldTypes = [];
-			FieldTypes = [
-			              	{text :['text','should be a text']},
-			              	{email :['email','should be an email']},
-			              ];
+		.value('FieldTypes',{
+			text :['text','should be a text'],
+			email :['email','should be an email']
 		})
 		.directive('formField',function(FieldTypes){
 			return {
@@ -19,6 +16,9 @@ angular.module('ContactsApp')
 				},
 				link:function($scope,element,attr){
 					$scope.types = FieldTypes;
+				},
+				remove:function(){
+					alert('remove');
 				}
 			};
 		});

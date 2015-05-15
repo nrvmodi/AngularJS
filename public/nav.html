@@ -2,9 +2,9 @@
 	<div class="container-fluid">
 		<div class="nav-header">
 			<ul class="nav navbar-nav">
-				<li class='active'><a class="text-center ng-binding"
+				<li ng-class='{active:PAGE=="list"}'><a class="text-center ng-binding"
 					href="/contacts">Contacts</a></li>
-				<li><a class="text-center ng-binding" href="/contacts/new">Add
+				<li ng-class='{active:PAGE=="new"}'><a class="text-center ng-binding" href="/contacts/new">Add
 						Contact</a></li>
 			</ul>
 		</div>

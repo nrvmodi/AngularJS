@@ -1,9 +1,13 @@
 
 <div class="list-group-item">
-	<p><h3 class="text-left">First Name :</h3>{{contact.firstName}}</p>
-	<p><h3 class="text-left">Last Name :</h3>{{contact.lastName}}</p>
+	<div ng-repeat='(k,v) in fields | keyFilter: "id"' class="row">
+		<div class="col-sm-4 control-label strong"><h4><strong>{{k | labelCase}}</strong></h4></div>
+		<div class="col-sm-6" ><h4>{{contact[k][0]}}</h4></div>
+	</div>
+</div>
+<div class="list-group-item">
 	<a href="#">
-		<button class="btn btn-default">
+		<button class="btn btn-default" ng-click='edit(contact.id)'>
 			<span class="glyphicon glyphicon-pencil"></span><span> - Edit</span>
 		</button>
 	</a> 

@@ -1,9 +1,19 @@
-<div class="row form-group">
+<div class="row form-group" ng-form='{{field}}' ng-class='{"has-error": {{field}}.$dirty && {{field}}.$invalid}'>
 	<div class="col-sm-2">
-		<label class="form-label text-center">{{field | labelCase}} :</label>
+		<label class="form-label text-center">{{field | labelCase}} <span ng-if='required'> *</span> :</label>
 	</div>
-	<div class="col-sm-4">
-		<input type='text' class='form-control' >{{record.firstName}}</input>
+	<div class="col-sm-4" ng-switch='required'>
+		<input ng-switch-when='true' ng-model='record[field][0]' type='{{record[field][1]}}' class='form-control' required="required"></input>
+		<div ng-switch-default class="input-group">
+			<input ng-model='record[field][0]' type='{{record[field][1]}}' class='form-control'></input>
+			<span class="input-group-btn">
+				<button class="btn btn-default" ng-click='remove()'><span class="glyphicon glyphicon-remove-circle"></span></button>
+			</span>
+		</div>
+	</div>	
+	<div class="col-sm-6 has-error" ng-show='{{field}}.$dirty && {{field}}.$invalid' ng-messages='{{field}}.$error'>
+		<p class="control-label text-left" ng-message='required'>{{field | labelCase}} is required.</p>
+		<p class="control-label" ng-repeat='(k,v) in types' ng-message='{{k}}'>{{field | labelCase}} {{v[1]}}</p>
 	</div>
 </div>
 

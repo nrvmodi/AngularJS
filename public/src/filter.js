@@ -9,5 +9,16 @@ angular.module('ContactsApp')
 			return function(input){
 				return input.toUpperCase();
 			};
-		});
+		}).filter('keyFilter',function(){
+			return function(obj,query){
+				var result = {};
+				angular.forEach(obj,function(val,key){
+					if(query !== key){
+						result[key]=val;
+					}
+				});
+				return result;
+			}
+		})
+		;
 	

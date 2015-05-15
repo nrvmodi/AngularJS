@@ -10,7 +10,7 @@
 		</tr>
 		<tr ng-repeat="contact in contacts | filter: query | orderBy : sort.field.name : sort.order">
 			<td ng-click='show(contact.id)' ng-repeat="field in fields" >
-				{{contact[field.name] | labelCase}}
+				{{contact[field.name][0] | labelCase}}
 			</td>
 		</tr>
 	</tbody>

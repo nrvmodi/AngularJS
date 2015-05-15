@@ -1,0 +1,26 @@
+<form name='editContact' class='form-horizontal'>
+	<form-field record='contact' live='false' required='true' field='firstName'></form-field>
+	<form-field record='contact' live='false' required='true' field='lastName'></form-field>
+	
+	<form-field record='contact' ng-repeat='(k,v) in contact | keyFilter:"firstName" | keyFilter:"lastName" | keyFilter:"id"' live='false' field='{{k}}'></form-field>
+	
+	<a ng-click="edit()" class="ng-scope">
+     <button class="btn btn-default">
+      <span class="glyphicon glyphicon-ok"></span>
+      <span>Edit</span>
+     </button>
+   </a>
+<!-- <div class="list-group-item">
+	<div class="form-group">
+       <p><label for="name">First Name: </label> <input class="form-control ng-pristine ng-valid" type="text" ng-model="contact.firstName"> </p>
+       <p><label for="name">Last Name: </label> <input class="form-control ng-pristine ng-valid" type="text" ng-model="contact.lastName"> </p>
+	</div>
+        
+   <a ng-click="save()" class="ng-scope">
+     <button class="btn btn-default">
+      <span class="glyphicon glyphicon-ok"></span>
+      <span> Add</span>
+     </button>
+   </a>
+ </div> -->
+</form>
